@@ -200,11 +200,23 @@ html {
   color: #c0392b;
 }
 
-.login-btn,
+
 .reg-btn {
   padding: 6px 12px;
   font-size: 11px;
-  background: #c0392b;
+  background: #128824;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  margin-top: -8px;
+}
+
+.login-btn{  padding: 6px 12px;
+  font-size: 11px;
+  background: #2b78dd;
   color: #333;
   border-radius: 5px;
   border: none;
