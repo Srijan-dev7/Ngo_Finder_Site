@@ -22,7 +22,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 25px;
+  padding: 6px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,19 +31,23 @@ html {
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .links {
   display: flex;
-  gap: 24px;
+  gap: 14px;
 }
 
 .links a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
+  
+}
+.nav-text{
+  margin-top: 6px; 
 }
 
 .main {
@@ -52,8 +56,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   text-align: center;
   color: white;
 }
@@ -64,41 +68,43 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(6px);
+  filter: blur(16px);
   z-index: -1;
 }
 
 .main h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #000000;
 }
 
 .main p {
-  font-size: 22px;
+  font-size: 20px;
+  color:antiquewhite;
 }
 
 .search {
   display: flex;
-  gap: 12px;
-  margin-top: 30px;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .search select,
 .search input,
 .search button {
-  padding: 12px 16px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
   border: none;
   font-weight: bold;
 }
 
 .search select {
-  width: 260px;
+  width: 180px;
 }
 
 .search input {
-  width: 260px;
+  width: 180px;
 }
 
 .search button {
@@ -108,78 +114,80 @@ html {
 }
 
 .card-category {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 320px;
-  background: slategrey;
+  width: 220px;
+  background: rgb(1, 1, 1);
   color: #fbfbfb;
-  border-radius: 14px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 14px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .card h3 {
-  margin-top: 14px;
-  font-size: 22px;
+  margin-top: 10px;
+  font-size: 15px;
   font-weight: bolder;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .emergency {
-  margin-top: 100px;
-  padding: 30px 40px;
+  margin-top: 30px;
+  padding: 20px ;
   background: transparent;
-  backdrop-filter: blur(6px);
+  
 }
 
 .emergency h2 {
   display: inline-block;
   color: white;
-  font-size: 42px;
-  margin-bottom: 30px;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .emergency h2::after {
   content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   background: #ff6b5a;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .alert-row {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .alert {
-  width: 280px;
-  background: transparent;
-  padding: 28px;
-  border-radius: 12px;
+  width: 400px;
+  background: black;
+  padding: 18px;
+  border-radius: 10px;
   border: 2px solid rgb(0, 0, 0);
-  box-shadow: 0 12px 30px rgba(124, 14, 14, 0.25);
-  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(124, 14, 14, 0.25);
+  font-size: 20px;
+
+
 }
 
 .op {
@@ -189,49 +197,48 @@ html {
 
 .login-btn,
 .reg-btn {
-  padding: 10px 18px;
-  font-size: 14px;
+  padding: 6px 12px;
+  font-size: 11px;
   background: #c0392b;
   color: #333;
-  border-radius: 6px;
+  border-radius: 5px;
   border: none;
   text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .login-page {
-  padding-top: 140px;
+  padding-top: 90px;
 }
 
 .login-box {
-  margin-top: 40px;
-  width: 420px;
-  padding: 40px;
+  margin-top: 30px;
+  width: 300px;
+  padding: 28px;
   background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(12px);
-  border-radius: 22px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .login-box input {
   width: 100%;
-  padding: 14px 16px;
-  font-size: 16px;
-  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  border-radius: 8px;
   border: none;
   outline: none;
 }
 
 .login-submit {
   width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 8px;
   border: none;
   background: #0c9310;
   color: white;
@@ -240,7 +247,7 @@ html {
 }
 
 .login-text {
-  font-size: 14px;
+  font-size: 11px;
   color: white;
   text-align: center;
 }
