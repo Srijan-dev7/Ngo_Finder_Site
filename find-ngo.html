@@ -41,6 +41,13 @@
     <button>Search</button>
   </div>
 
+  <div class="search">
+    <input type="text" id="ngoSearch" placeholder="Search NGO by name">
+    <button onclick="searchNGO()">Search</button>
+  </div>
+
+  <div id="results"></div>
+
   <div class="card-category">
     <div class="card">
       <img src="image/dog-kitten.jpg" />
@@ -67,6 +74,89 @@
     </div>
   </div>
 </section>
+  <script>
+  // Array of NGOs (name + link)
+const ngos = [
+  {
+    name: "Blue Cross of India",
+    link: "https://www.bluecrossofindia.org/",
+    img: "image/ngo1.jpg"
+  },
+  {
+    name: "PETA India",
+    link: "https://www.petaindia.com/",
+    img: "https://www.petaindia.com/wp-content/uploads/2025/12/peta-india-logo_2026.png"
+  },
+  {
+    name: "People For Animals",
+    link: "https://www.peopleforanimalsindia.org/",
+    img: "image/ngo3.jpg"
+  },
+  {
+    name: "Indian Red Cross Society",
+    link: "https://indianredcross.org/",
+    img: "image/ngo4.jpg"
+  },
+  {
+    name: "Akshaya Patra Foundation",
+    link: "https://www.akshayapatra.org/",
+    img: "image/ngo5.jpg"
+  },
+  {
+    name: "Smile Foundation",
+    link: "https://www.smilefoundationindia.org/",
+    img: "image/ngo6.jpg"
+  },
+  {
+    name: "HelpAge India",
+    link: "https://www.helpageindia.org/",
+    img: "image/ngo7.jpg"
+  },
+  {
+    name: "CRY – Child Rights and You",
+    link: "https://www.cry.org/",
+    img: "image/ngo8.jpg"
+  },
+  {
+    name: "Goonj",
+    link: "https://goonj.org/",
+    img: "image/ngo9.jpg"
+  },
+  {
+    name: "Teach For India",
+    link: "https://www.teachforindia.org/",
+    img: "image/ngo10.jpg"
+  }
+];
 
+  function searchNGO() {
+  const input = document.getElementById("ngoSearch").value.toLowerCase();
+  const resultsDiv = document.getElementById("results");
+
+  resultsDiv.innerHTML = "";
+
+  const filteredNGOs = ngos.filter(ngo =>
+    ngo.name.toLowerCase().includes(input)
+  );
+
+  if (filteredNGOs.length === 0) {
+    resultsDiv.innerHTML = "<p>No NGOs found</p>";
+    return;
+  }
+
+  filteredNGOs.forEach(ngo => {
+    const card = document.createElement("div");
+    card.className = "ngo-card";
+
+    card.innerHTML = `
+      <img src="${ngo.img}" alt="${ngo.name}">
+      <h3>${ngo.name}</h3>
+      <a href="${ngo.link}" target="_blank">Visit NGO</a>
+    `;
+
+    resultsDiv.appendChild(card);
+  });
+}
+</script>
 </body>
 </html>
