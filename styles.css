@@ -158,18 +158,11 @@ html {
 
 .emergency h2 {
   display: inline-block;
-  color: rgba(12, 2, 2, 0.763);
+  color:black;
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-.emergency h2::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background: #ff6b5a;
-  margin-top: 6px;
-}
 
 .emergency img {
   height: 32px;
@@ -333,5 +326,14 @@ html {
 .emer{
   font-weight: bolder;
   margin-top: 4px;
-  color: black;
+  text-align: left;
+  margin-left: 80px;
+  
+}
+.emer::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #ff6b5a;
+  margin-top: 6px;
 }
