@@ -19,8 +19,9 @@
     <a class="nav-text" href="index.html">Home</a>
     <a class="nav-text" href="find-ngo.html">Find NGO</a>
     <a class="nav-text" href="emergency.html">Emergency Alerts</a>
-    <a href="login.html" class="login-btn">Login</a>
-     <a href="register.html" class="reg-btn">Register</a>
+   <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+<a href="register.html" class="reg-btn" id="registerBtn">Register</a>
+<a href="#" class="login-btn" id="logoutBtn" style="display:none;">Logout</a>
   </nav>
 </header>
 
@@ -63,5 +64,20 @@
     </section>
 
 </body>
+<script>
+  const loginBtn = document.getElementById("loginBtn");
+  const registerBtn = document.getElementById("registerBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
 
+  if (localStorage.getItem("loggedIn") === "true") {
+    loginBtn.style.display = "none";
+    registerBtn.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.onclick = function () {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+  };
+</script>
 </html>
