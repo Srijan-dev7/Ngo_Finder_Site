@@ -73,7 +73,7 @@ html {
 }
 
 .main h1 {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 8px;
   color: #000000;
 }
@@ -158,9 +158,10 @@ html {
 
 .emergency h2 {
   display: inline-block;
-  color:black;
-  font-size: 28px;
+  color:rgb(0, 0, 0);
+  font-size: 36px;
   margin-bottom: 20px;
+  
 }
 
 
@@ -336,4 +337,67 @@ html {
   height: 2px;
   background: #ff6b5a;
   margin-top: 6px;
+}
+
+.category-main {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 40px;
+  color: white;
+}
+
+.category-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.category-card {
+  display: flex;
+  background: rgba(0,0,0,0.7);
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ngo-left {
+  width: 35%;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+}
+
+.ngo-left img {
+  width: 100%;
+  
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ngo-right {
+  width: 65%;
+  padding: 20px;
+}
+
+.ngo-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ngo-right li {
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#categoryTitle{
+  text-align: center;
+  align-items: center;
 }

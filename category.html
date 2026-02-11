@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpNear | Category</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">
+    <img src="./icons/android-chrome-512x512.png" alt="HelpNear Logo">
+    <span>HelpNear</span>
+  </div>
+  <nav class="links">
+    <a class="nav-text" href="index.html">Home</a>
+    <a class="nav-text" href="find-ngo.html">Find NGO</a>
+    <a class="nav-text" href="emergency.html">Emergency Alerts</a>
+    
+  </nav>
+</header>
+
+
+
+<section class="category-main">
+
+  
+  <img src="./image/ngos-hero-background-300x134.jpg" class="category-bg-img">
+
+  <h1 id="categoryTitle"></h1>
+  <div id="categoryContainer"></div>
+
+</section>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+
+document.getElementById("categoryTitle").innerText =
+  type.charAt(0).toUpperCase() + type.slice(1) + " Category";
+
+const data = {
+
+  pet: [
+     {
+      ngo: "PETA",
+      img: "https://www.petaindia.com/wp-content/uploads/2025/12/peta-india-logo_2026.png",
+      details: [
+        "Labrador Dog- 4 Available",
+        "Persian Cat - 3 Available",
+        "German Shepherd Dog - 5 Available",
+        "Parrot - 10 Available",
+      ]
+    },
+    {
+      ngo: "Blue Cross of India",
+      img: "https://bluecrossofindia.org/images/BCILogoWithWhiteR.png",
+      details: [
+        "Horses - 6 Available",
+        "Pigeon - 20 Available",
+        "Turtle - 3 Available",
+      ]
+    }
+    
+  ],
+
+  blood: [
+    {
+      ngo: "Indian Red Cross",
+      img: "https://www.indianredcross.org/wp-content/uploads/2023/09/cropped-IRCS-logo-Final.png",
+      details: [
+        "O+ Available",
+        "B- Required",
+        "AB+ Required"
+      ]
+    },
+     {
+      ngo: "Youngsitaan",
+      img: "https://youngistaanfoundation.org/wp-content/uploads/2014/10/youngistaan-270x270.png",
+      details: [
+        "A+ Required",
+        "B- Required",
+        "O+ Available"
+      ]
+    }
+  ],
+
+  education: [
+    {
+      ngo: "Smile Foundation",
+      img: "https://www.smilefoundationindia.org/wp-content/uploads/2024/07/SMILE-FOUNDATION-LOGO-e1662456150120-1-300x235.png.webp",
+      details: [
+        "Need school supplies",
+        "Need volunteer teachers",
+        "Scholarship support needed"
+      ]
+    },
+    {
+      ngo: "Teach For India",
+      img: "https://cimages.milaap.org/milaap/image/upload/c_fill,g_faces,h_452,w_603/v1586071632/production/images/campaign/156299/Teach_For_India_10_Years_hghfgr_1586071661.jpg",
+      details: [
+        "Require subject mentors",
+        "Need classroom volunteers",
+        "Looking for rural educators"
+      ]
+    }
+  ],
+
+  volunteer: [
+  
+    {
+      ngo: "HelpAge India",
+      img: "https://static.mygov.in/media/self4society/2019/08/mygov-999999999393579370.jpg",
+      details: [
+        "Community outreach volunteers",
+        "Medical camp support",
+        "Elder care assistants needed"
+      ]
+    },
+      {
+      ngo: "Goonj",
+      img: "https://scontent-maa3-1.xx.fbcdn.net/v/t39.30808-6/471662866_10162093533306265_4630452614208032794_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=tV5rzNbzQMMQ7kNvwGgb_5A&_nc_oc=AdmRhidoddVql7xXIwivSRd09ILell_xrpApdWDOsG3EZZBxs4006BZA6si58ZNim6w&_nc_zt=23&_nc_ht=scontent-maa3-1.xx&_nc_gid=RTUpgEMam7cbRNUK3WVEOA&oh=00_AfvyReF7gzP51RnDK0pHmWaH1rW1EOvaIp5N-M8yrI_8Sw&oe=69928032",
+      details: [
+        "Clothes collection drive",
+        "Field volunteers needed",
+        "Event management help"
+      ]
+    }
+  ]
+};
+
+const container = document.getElementById("categoryContainer");
+
+data[type].forEach(item => {
+
+  let listItems = "";
+  item.details.forEach(detail => {
+    listItems += `<li>${detail}</li>`;
+  });
+
+  container.innerHTML += `
+    <div class="category-card">
+      <div class="ngo-left">
+        <img src="${item.img}">
+        <h3>${item.ngo}</h3>
+      </div>
+      <div class="ngo-right">
+        <ul>
+          ${listItems}
+        </ul>
+      </div>
+    </div>
+  `;
+});
+
+</script>
+
+</body>
+</html>
