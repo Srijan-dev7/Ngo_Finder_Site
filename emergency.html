@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HelpNear | Emergency Alerts</title>
     <link rel="stylesheet" href="styles.css" />
-     <link rel="icon" href="./icons/favicon.ico">
+    <link rel="icon" href="./icons/favicon.ico">
 </head>
 
 <body>
-<header class="nav">
-  <div class="logo">
-  <img src="./icons/android-chrome-512x512.png" alt="HelpNear Logo">
-  <span>HelpNear</span>
-</div>
-  <nav class="links">
-    <a class="nav-text" href="index.html">Home</a>
-    <a class="nav-text" href="find-ngo.html">Find NGO</a>
-    <a class="nav-text" href="emergency.html">Emergency Alerts</a>
-   <a href="login.html" class="login-btn" id="loginBtn">Login</a>
-<a href="register.html" class="reg-btn" id="registerBtn">Register</a>
-<a href="#" class="login-btn" id="logoutBtn" style="display:none;">Logout</a>
-  </nav>
-</header>
+    <header class="nav">
+        <div class="logo">
+            <img src="./icons/android-chrome-512x512.png" alt="HelpNear Logo">
+            <span>HelpNear</span>
+        </div>
+        <nav class="links">
+            <a class="nav-text" href="index.html">Home</a>
+            <a class="nav-text" href="find-ngo.html">Find NGO</a>
+            <a class="nav-text" href="emergency.html">Emergency Alerts</a>
+            <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+            <a href="register.html" class="reg-btn" id="registerBtn">Register</a>
+            <a href="#" class="login-btn" id="logoutBtn" style="display:none;">Logout</a>
+        </nav>
+    </header>
 
     <section class="main">
         <img src="image/new_bg.jpg" class="sri" />
@@ -33,7 +33,17 @@
 
         <div class="emergency">
             <div class="alert-row">
-
+                <div class="alert">
+                    <strong class="op">🧓 Elder Care Support:</strong> Volunteers needed for senior citizen health camp.
+                </div>
+                <div class="alert">
+                    <strong class="op">🌧️ Disaster Relief:</strong> Relief materials required for cyclone-affected
+                    coastal areas.
+                </div>
+                <div class="alert">
+                    <strong class="op">💊 Medicine Shortage:</strong> Urgent need for diabetes and BP medications in
+                    rural camp.
+                </div>
                 <div class="alert">
                     <strong class="op">🏥 Urgent Supplies:</strong>
                     O+ blood needed at City Hospital
@@ -65,19 +75,20 @@
 
 </body>
 <script>
-  const loginBtn = document.getElementById("loginBtn");
-  const registerBtn = document.getElementById("registerBtn");
-  const logoutBtn = document.getElementById("logoutBtn");
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
 
-  if (localStorage.getItem("loggedIn") === "true") {
-    loginBtn.style.display = "none";
-    registerBtn.style.display = "none";
-    logoutBtn.style.display = "inline-block";
-  }
+    if (localStorage.getItem("loggedIn") === "true") {
+        loginBtn.style.display = "none";
+        registerBtn.style.display = "none";
+        logoutBtn.style.display = "inline-block";
+    }
 
-  logoutBtn.onclick = function () {
-    localStorage.removeItem("loggedIn");
-    window.location.href = "index.html";
-  };
+    logoutBtn.onclick = function () {
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.html";
+    };
 </script>
+
 </html>
