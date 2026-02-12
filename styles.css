@@ -370,7 +370,7 @@ html {
   width: 35%;
   padding: 20px;
   text-align: center;
-  background: rgba(255,255,255,0.1);
+  background: black;
 }
 
 .ngo-left img {
@@ -400,4 +400,28 @@ html {
 #categoryTitle{
   text-align: center;
   align-items: center;
+}
+
+.alert-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+
+.alert-link:link,
+.alert-link:visited,
+.alert-link:hover,
+.alert-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.alert-link .alert {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alert-link:hover .alert {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
